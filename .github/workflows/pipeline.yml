@@ -45,18 +45,7 @@ jobs:
           heroku_app_name: fspart11-bloglist
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: https://fspart11-bloglist.herokuapp.com/health
-          rollbackonhealthcheckfailed: true
-      - uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-      # Test run video was always captured, so this action uses "always()" condition
-      - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+          rollbackonhealthcheckfailed: false
   tag_release:
     needs: [deployment_pipeline]
     runs-on: ubuntu-latest
