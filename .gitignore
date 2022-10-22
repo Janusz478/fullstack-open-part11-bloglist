@@ -1,5 +1,3 @@
 node_modules
 server/build
 .env
-cypress/videos
-cypress/screenshots
