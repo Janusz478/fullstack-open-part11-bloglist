@@ -6,8 +6,8 @@ on:
       - main
   pull_request:
     branches: [main]
-    types: [opened, synchronized]
-    
+    types: [opened, synchronize]
+
 jobs:
   deployment_pipeline:
     runs-on: ubuntu-20.04
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
       - name: npm install
       - run: npm install
       - name: lint
