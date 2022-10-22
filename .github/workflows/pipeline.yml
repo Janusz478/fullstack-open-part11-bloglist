@@ -45,7 +45,7 @@ jobs:
           heroku_app_name: fspart11-bloglist
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: https://fspart11-bloglist.herokuapp.com/health
-          rollbackonhealthcheckfailed: false
+          rollbackonhealthcheckfailed: true
   tag_release:
     needs: [deployment_pipeline]
     runs-on: ubuntu-latest
