@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "build": "cd client && react-scripts build && mv build ../server",
+    "build": "cd client && react-scripts build && cp -R build ../server && rm -R build",
     "start-prod": "cross-env NODE_ENV=production node server/index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit",
     "fe:test": "jest client --verbose --runInBand --forceExit",
@@ -12,9 +12,8 @@
     "prettier": "npx prettier --check .",
     "start:e2e": "cross-env NODE_ENV=test node server/index.js",
     "test:e2e": "cypress run",
-    "cyp": "cypress open",
-    "fe:dev": "cd client && react-scripts start",
-    "be:dev": "cross-env NODE_ENV=development nodemon server/index.js"
+    "be:dev": "cross-env NODE_ENV=development nodemon server/index.js",
+    "fe:dev": "cd client && react-scripts start"
   },
   "author": "",
   "license": "ISC",
