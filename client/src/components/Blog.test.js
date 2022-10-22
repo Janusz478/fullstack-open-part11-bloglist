@@ -1,6 +1,3 @@
-import "@testing-library/jest-dom/extend-expect";
-
-
 describe("Frontend Test", () => {
   test("Wild Card Test", async () => {
     const blog = {
@@ -12,6 +9,6 @@ describe("Frontend Test", () => {
         name: "testUserName",
       },
     };
-    expect(blog.title).toEqual("testTitle")
+    expect(blog.title).toEqual("testTitle");
   });
 });

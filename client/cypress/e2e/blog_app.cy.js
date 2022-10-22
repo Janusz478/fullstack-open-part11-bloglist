@@ -125,7 +125,7 @@ describe("Blog app", function () {
       cy.get("#bloglikes").contains("like").click();
       cy.get("#bloglikes").contains("like").click();
 
-      cy.contains("Blogs").click()
+      cy.contains("Blogs").click();
       cy.get("#blogs>.blog").eq(0).should("contain", "test blog 2");
       cy.get("#blogs>.blog").eq(1).should("contain", "test blog 1");
       cy.get("#blogs>.blog").eq(2).should("contain", "test blog 3");
